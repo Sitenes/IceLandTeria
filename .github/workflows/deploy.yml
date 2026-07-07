@@ -4,15 +4,15 @@ on:
   push:
     branches:
       - master
-      # - main
+      - main
       - publish
 
 env:
   DOTNET_VERSION: "10.0.x"
   PUBLISH_COMMAND: "dotnet publish -c Release -r linux-x64 --no-self-contained -o out"
-  GITHUB_REPO_NAME: "NajafabadMelk" 
-  APP_NAME: "WebSite" 
-  APP_PORT: "5003"
+  SERVER_FOLDER_NAME: "IceLandTeria" 
+  APP_NAME: "IceLandTeria" 
+  APP_PORT: "5005"
   ASPNETCORE_ENVIRONMENT: "Production"
   BASE_DIR: "/home/amin/User/Projects/Dotnet/Publish"
 
