@@ -29,6 +29,11 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
+      - name: Clean publish folder
+        run: |
+          rm -rf out
+          mkdir -p out
+
       - name: Publish
         run: |
           echo "Running publish command:"
@@ -40,7 +45,7 @@ jobs:
           echo "out directory content:"
           ls -lah out
 
-      - name: Upload to Server
+      - name: Upload to Server 
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
