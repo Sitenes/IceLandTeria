@@ -1,32 +1,49 @@
-using System.Diagnostics;
-using IceLandTeria.Models;
+using IceLandTeria.Data;
+using IceLandTeria.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace IceLandTeria.Controllers
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public HomeController(ApplicationDbContext context)
     {
-        private readonly ILogger<HomeController> _logger;
+        _context = context;
+    }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+    public async Task<IActionResult> Index()
+    {
+        var categories = await _context.Categories
+            .AsNoTracking()
+            .OrderBy(x => x.SortOrder)
+            .ThenBy(x => x.Id)
+            .Select(category => new MenuCategoryViewModel
+            {
+                Id = category.Id,
+                Title = category.Title,
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+                Products = _context.Products
+                    .AsNoTracking()
+                    .Where(product => product.CategoryId == category.Id)
+                    .OrderBy(product => product.SortOrder)
+                    .ThenBy(product => product.Id)
+                    .Select(product => new MenuProductViewModel
+                    {
+                        Id = product.Id,
+                        Title = product.Title,
+                        Description = product.Description,
+                        Price = product.Price
+                    })
+                    .ToList()
+            })
+            .ToListAsync();
 
-        public IActionResult Privacy()
+        var model = new MenuViewModel
         {
-            return View();
-        }
+            Categories = categories
+        };
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        return View(model);
     }
 }

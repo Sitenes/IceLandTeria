@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color"
+          content="#0b0b0d" />
+
+    <title>
+        @ViewData["Title"] - IceLandTeria
+    </title>
+
+    <link rel="stylesheet"
+          href="~/css/admin.css"
+          asp-append-version="true" />
+          
+          @await RenderSectionAsync("Styles", required: false)
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-shell">
+
+        <div class="admin-overlay"
+             id="adminOverlay"
+             aria-hidden="true"></div>
+
+        <aside class="admin-sidebar"
+               id="adminSidebar"
+               aria-label="منوی مدیریت">
+
+            <div class="admin-sidebar__header">
+
+                <a href="/Admin"
+                   class="admin-brand"
+                   aria-label="صفحه اصلی پنل مدیریت IceLandTeria">
+
+                    <span class="">
+                          <img src="/images/logo.jpg" alt="آیس لند" style="max-width: 60px;">
+                    </span>
+
+                    <span class="admin-brand__text">
+                        <strong>IceLandTeria</strong>
+                        <small>پنل مدیریت</small>
+                    </span>
+
+                </a>
+
+                <button type="button"
+                        class="admin-sidebar__close"
+                        id="adminSidebarClose"
+                        aria-label="بستن منوی مدیریت">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m7.05 7.05 9.9 9.9m0-9.9-9.9 9.9" />
+                    </svg>
+
+                </button>
+
+            </div>
+
+            <nav class="admin-navigation"
+                 aria-label="ناوبری پنل">
+
+                <span class="admin-navigation__label">
+                    مدیریت منو
+                </span>
+
+                <a href="/Admin/Products"
+                   class="admin-navigation__item
+                   @(Context.Request.Path.StartsWithSegments("/Admin/Products") ? "is-active" : "")">
+
+                    <span class="admin-navigation__icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5v-13Zm2.5-.5a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-11ZM7 8h10v1.5H7V8Zm0 3.5h10V13H7v-1.5Zm0 3.5h6v1.5H7V15Z" />
+                        </svg>
+                    </span>
+
+                    <span>
+                        محصولات
+                    </span>
+                </a>
+
+                <a href="/Admin/Categories"
+                   class="admin-navigation__item
+                   @(Context.Request.Path.StartsWithSegments("/Admin/Categories") ? "is-active" : "")">
+
+                    <span class="admin-navigation__icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h5A2.5 2.5 0 0 1 14 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-5A2.5 2.5 0 0 1 4 10.5v-5Zm1.5 0v5c0 .55.45 1 1 1h5c.55 0 1-.45 1-1v-5c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1Zm7.5 8A2.5 2.5 0 0 1 15.5 11h2a2.5 2.5 0 0 1 2.5 2.5v5a2.5 2.5 0 0 1-2.5 2.5h-2a2.5 2.5 0 0 1-2.5-2.5v-5Zm1.5 0v5c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-5c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1Z" />
+                        </svg>
+                    </span>
+
+                    <span>
+                        دسته‌بندی‌ها
+                    </span>
+                </a>
+
+            </nav>
+
+            <div class="admin-sidebar__footer">
+
+                <a href="/"
+                   class="admin-public-link">
+
+                    <span>
+                        مشاهده سایت
+                    </span>
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13 5h6v6m0-6-8 8m6 1v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4" />
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div class="admin-main">
+
+            <header class="admin-header">
+
+                <div class="admin-header__right">
+
+                    <button type="button"
+                            class="admin-menu-button"
+                            id="adminMenuButton"
+                            aria-label="باز کردن منوی مدیریت"
+                            aria-controls="adminSidebar"
+                            aria-expanded="false">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </button>
+
+                    <div class="admin-header__title">
+                        <span>پنل مدیریت</span>
+                        <strong>@ViewData["Title"]</strong>
+                    </div>
+
+                </div>
+
+                <div class="admin-header__left">
+
+                    <div class="admin-header__brand">
+                        IceLandTeria
+                    </div>
+
+                </div>
+
+            </header>
+
+            <main class="admin-content">
+                @RenderBody()
+            </main>
+
+        </div>
+
+    </div>
+
+    <script src="~/js/admin.js"
+            asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

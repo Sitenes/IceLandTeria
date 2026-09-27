@@ -1,0 +1,75 @@
+@{
+    ViewData["Title"] = "مدیریت IceLandTeria";
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+}
+
+<main class="admin-page">
+    <section class="admin-welcome">
+        <div class="admin-welcome__content">
+            <span class="admin-eyebrow">مدیریت منو</span>
+
+            <h1 class="admin-welcome__title">
+                به پنل مدیریت IceLandTeria خوش آمدید
+            </h1>
+
+            <p class="admin-welcome__description">
+                از این بخش می‌توانید محصولات و دسته‌بندی‌های منوی IceLandTeria را مدیریت کنید.
+            </p>
+        </div>
+    </section>
+
+    <section class="admin-section" aria-labelledby="management-section-title">
+        <div class="admin-section__header">
+            <div>
+                <span class="admin-section__eyebrow">مدیریت محتوا</span>
+                <h2 id="management-section-title">
+                    بخش‌های مدیریت
+                </h2>
+            </div>
+        </div>
+
+        <div class="admin-management-grid">
+
+            <a class="admin-management-card" href="/Admin/Products">
+                <span class="admin-management-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <path
+                        d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5v-13Zm2.5-.5a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-11ZM7 8h10v1.5H7V8Zm0 3.5h10V13H7v-1.5Zm0 3.5h6v1.5H7V15Z" />
+                    </svg>
+                </span>
+
+                <span class="admin-management-card__content">
+                    <strong>محصولات</strong>
+                    <span>
+                        مدیریت محصولات و اطلاعات نمایش داده‌شده در منو
+                    </span>
+                </span>
+
+                <span class="admin-management-card__arrow" aria-hidden="true">
+                    ←
+                </span>
+            </a>
+
+            <a class="admin-management-card" href="/Admin/Categories">
+                <span class="admin-management-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <path
+                        d="M4 5.5A2.5 2.5 0 0 1 6.5 3h5A2.5 2.5 0 0 1 14 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-5A2.5 2.5 0 0 1 4 10.5v-5Zm1.5 0v5c0 .55.45 1 1 1h5c.55 0 1-.45 1-1v-5c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1Zm7.5 8A2.5 2.5 0 0 1 15.5 11h2a2.5 2.5 0 0 1 2.5 2.5v5a2.5 2.5 0 0 1-2.5 2.5h-2a2.5 2.5 0 0 1-2.5-2.5v-5Zm1.5 0v5c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-5c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1Z" />
+                    </svg>
+                </span>
+
+                <span class="admin-management-card__content">
+                    <strong>دسته‌بندی‌ها</strong>
+                    <span>
+                        مدیریت دسته‌بندی‌های محصولات منو
+                    </span>
+                </span>
+
+                <span class="admin-management-card__arrow" aria-hidden="true">
+                    ←
+                </span>
+            </a>
+
+        </div>
+    </section>
+</main>

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IceLandTeria.ViewModels.MenuViewModel
+@{
     ViewData["Title"] = "آیس لند - کافه تریا | هر لحظه یه طعم تازه";
     Layout = null;
 }
@@ -27,22 +28,22 @@
     <meta property="og:image:alt" content="فضای داخلی آیس لند">
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
-                                                                                        {
-                                                                                            "@@context": "https://schema.org",
-                                                                                            "@@type": "CafeOrCoffeeShop",
-                                                                                            "name": "آیس لند",
-                                                                                            "description": "کافه تریا آیس لند - بستنی سنتی، فالوده، آبمیوه طبیعی، قهوه تخصصی و شیک در چهارباغ اصفهان",
-                                                                                            "address": {
-                                                                                                "@@type": "PostalAddress",
-                                                                                                "streetAddress": "چهارباغ پایین، بعد از بانک ملی، نبش پاساژ عبداللهی",
-                                                                                                "addressLocality": "اصفهان",
-                                                                                                "addressCountry": "IR"
-                                                                                            },
-                                                                                            "telephone": "+989138654066,+989134674857",
-                                                                                            "openingHours": "Sa-Th 10:00-21:00, Fr 09:00-22:00",
-                                                                                            "servesCuisine": "بستنی, فالوده, آبمیوه, قهوه, شیک, وافل",
-                                                                                            "priceRange": "$$"
-                                                                                        }
+                                                                                                    {
+                                                                                                        "@@context": "https://schema.org",
+                                                                                                        "@@type": "CafeOrCoffeeShop",
+                                                                                                        "name": "آیس لند",
+                                                                                                        "description": "کافه تریا آیس لند - بستنی سنتی، فالوده، آبمیوه طبیعی، قهوه تخصصی و شیک در چهارباغ اصفهان",
+                                                                                                        "address": {
+                                                                                                            "@@type": "PostalAddress",
+                                                                                                            "streetAddress": "چهارباغ پایین، بعد از بانک ملی، نبش پاساژ عبداللهی",
+                                                                                                            "addressLocality": "اصفهان",
+                                                                                                            "addressCountry": "IR"
+                                                                                                        },
+                                                                                                        "telephone": "+989138654066,+989134674857",
+                                                                                                        "openingHours": "Sa-Th 10:00-21:00, Fr 09:00-22:00",
+                                                                                                        "servesCuisine": "بستنی, فالوده, آبمیوه, قهوه, شیک, وافل",
+                                                                                                        "priceRange": "$$"
+                                                                                                    }
     </script>
 
     <script>
@@ -542,7 +543,7 @@
 
             <div class="intro-video-bg">
                 <video autoplay muted loop playsinline poster="images/intro-pic-primary.jpg">
-                    <source src="images/videos/Iceland TV.webm" type="video/webm">
+                    <source src="images/videos/IcelandTV.webm" type="video/webm">
                 </video>
                 <div class="intro-video-overlay"></div>
             </div>
@@ -600,1711 +601,105 @@
 
 
 
-        <!-- # menu
-        ================================================== -->
+        <!-- # menu -->
+    
         <section id="menu" class="container s-menu target-section">
 
-            <div class="row s-menu__content">
+        <div class="row s-menu__content">
 
-                <div class="column xl-4 lg-5 md-12 s-menu__content-start">
+            <div class="column xl-4 lg-5 md-12 s-menu__content-start">
 
-                    <div>
-                        <h3 class="text-display-title" style="margin-top: -30px;">منوی ما</h2>
-                        </div>
+                <div>
+                    <h3 class="text-display-title" style="margin-top: -30px;">
+                        منوی ما
+                    </h3>
+                </div>
 
-                        <nav class="tab-nav">
-                            <ul class="tab-nav__list">
-                                <li>
-                                    <a href="#tab-hot-drinks">
-                                        <span>بار گرم</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-cold-bar">
-                                        <span>بار سرد</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-natural-juice">
-                                        <span>آبمیوه طبیعی</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-ice-pack">
-                                        <span>آیس پک</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-icecream-faloodeh">
-                                        <span>بستنی و فالوده</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-milkshake">
-                                        <span>میلک شیک</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-milk-mix">
-                                        <span>میکس با شیر</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-mixed-juice">
-                                        <span>آبمیوه ترکیبی</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-vitamin">
-                                        <span>ویتامینه</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-waffle">
-                                        <span>وافل</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-water-cake">
-                                        <span>آب و کیک</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab-juice-liter">
-                                        <span>آبمیوه لیتری</span>
-                                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
-                                             stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                            fill-rule="nonzero" />
-                                        </svg>
-                                    </a>
-                                </li>
+                <nav class="tab-nav">
+                    <ul class="tab-nav__list">
+
+                        @for (var i = 0; i < Model.Categories.Count; i++)
+                        {
+                            var category = Model.Categories[i];
+
+                            <li>
+                                <a href="#tab-category-@category.Id">
+                                    <span>@category.Title</span>
+
+                                    <svg clip-rule="evenodd"
+                                         fill-rule="evenodd"
+                                         stroke-linejoin="round"
+                                         stroke-miterlimit="2"
+                                         viewBox="0 0 24 24"
+                                         xmlns="http://www.w3.org/2000/svg">
+
+                                        <path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
+                                              fill-rule="nonzero" />
+                                    </svg>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="column xl-6 lg-6 md-12 s-menu__content-end">
+
+                <div class="tab-content menu-block">
+
+                    @foreach (var category in Model.Categories)
+                    {
+                        <div id="tab-category-@category.Id"
+                             class="menu-block__group tab-content__item">
+
+                            <h6 class="menu-block__cat-name">
+                                @category.Title
+                            </h6>
+
+                            <ul class="menu-list">
+
+                                @foreach (var product in category.Products)
+                                {
+                                    <li class="menu-list__item">
+
+                                        <div class="menu-list__item-desc">
+
+                                            <h4>
+                                                @product.Title
+                                            </h4>
+
+                                            @if (!string.IsNullOrWhiteSpace(product.Description))
+                                            {
+                                                <p>
+                                                    @product.Description
+                                                </p>
+                                            }
+
+                                        </div>
+
+                                        <div class="menu-list__item-price">
+                                            @product.Price.ToString("N0") ریال
+                                        </div>
+
+                                    </li>
+                                }
+
                             </ul>
-                        </nav> <!-- end tab-nav -->
 
-                    </div> <!-- end s-menu__content-start -->
+                        </div>
+                    }
 
-                    <div class="column xl-6 lg-6 md-12 s-menu__content-end">
+                </div>
 
-                        <div class="tab-content menu-block">
+            </div>
 
-                            <!-- Hot Drinks -->
-                            <div id="tab-hot-drinks" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">بار گرم</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>اسپرسو 70/30 (روبستا) سینگل</h4>
-                                            <p>اسپرسوی غلیظ و پرانرژی با ترکیب ۷۰٪ روبوستا، شات سینگل.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>اسپرسو 70/30 (روبستا) دوبل</h4>
-                                            <p>شات دوبل اسپرسوی روبوستا، قوی و بیدارکننده.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>لته</h4>
-                                            <p>لاته گرم و مخملی با اسپرسو و شیر بخار داده.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>لته کارامل</h4>
-                                            <p>لاته با سیروپ کارامل شیرین و فوم ابریشمی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>لته وانیل</h4>
-                                            <p>لاته معطر با سیروپ وانیل و طعمی لطیف.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>لته نارگیل</h4>
-                                            <p>لاته با عطر دلپذیر نارگیل و شیر گرم.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>لته فندق</h4>
-                                            <p>لاته فندقی با سیروپ فندق و خامه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موکا</h4>
-                                            <p>ترکیب اسپرسو و شکلات داغ با شیر بخار داده.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آمریکانو</h4>
-                                            <p>اسپرسو و آب داغ، رقیق و خوش‌عطر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کاپوچینو</h4>
-                                            <p>اسپرسو با فوم شیر غلیظ و پودر کاکائو.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر گرم</h4>
-                                            <p>شیر تازه گرم و آرامش‌بخش.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر عسل</h4>
-                                            <p>شیر گرم با عسل طبیعی و مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر عسل دارچین</h4>
-                                            <p>شیر گرم با عسل و دارچین معطر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۷۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر ماسالا</h4>
-                                            <p>شیر گرم با ادویه ماسالا و چای هندی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر ماسالا عسل</h4>
-                                            <p>شیر ماسالا با عسل و عطر بیشتر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر کاکائو</h4>
-                                            <p>شیر گرم با پودر کاکائو مرغوب.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر نسکافه (گلد)</h4>
-                                            <p>شیر گرم با نسکافه گلد، شروع پرانرژی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>هات چاکلت</h4>
-                                            <p>شکلات داغ غلیظ با خامه فرم‌گرفته.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
+        </div>
 
-                            <!-- Cold Bar -->
-                            <div id="tab-cold-bar" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">بار سرد</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس لته</h4>
-                                            <p>اسپرسو سرد با شیر و یخ، خنک و دلچسب.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس لته کارامل</h4>
-                                            <p>آیس لته با سیروپ کارامل شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس لته وانیل</h4>
-                                            <p>آیس لته با سیروپ وانیل خوش‌عطر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس لته نارگیل</h4>
-                                            <p>آیس لته با طعم نارگیل گرمسیری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس لته فندق</h4>
-                                            <p>آیس لته با سیروپ فندق و شیر سرد.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس موکا</h4>
-                                            <p>موکای سرد با اسپرسو، شکلات و یخ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیس آمریکانو</h4>
-                                            <p>اسپرسو سرد و آب با یخ، ساده و کلاسیک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آفوگاتو وانیل</h4>
-                                            <p>اسکوپ بستنی وانیل با شات اسپرسو داغ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آفوگاتو شکلات</h4>
-                                            <p>بستنی شکلاتی با اسپرسو داغ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آفوگاتو دارک چاکلت</h4>
-                                            <p>بستنی شکلات تلخ با اسپرسو غلیظ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آفوگاتو پسته</h4>
-                                            <p>بستنی پسته‌ای و اسپرسو، ترکیبی لوکس.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موهیتو</h4>
-                                            <p>نوشیدنی خنک با نعناع، لیمو و گازدار.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>لیموناد</h4>
-                                            <p>لیموناد طبیعی با لیموی تازه و شکر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                </ul>
-                            </div>
+    </section>
 
-                            <!-- Natural Juice -->
-                            <div id="tab-natural-juice" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">آبمیوه طبیعی</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب هویج</h4>
-                                            <p>آب هویج تازه و شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب هویج بستنی</h4>
-                                            <p>آب هویج با یک اسکوپ بستنی وانیلی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب سیب</h4>
-                                            <p>آب سیب طبیعی و شفاف.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب پرتقال</h4>
-                                            <p>آب پرتقال تازه و سرشار از ویتامین C.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۷۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب انبه</h4>
-                                            <p>آب انبه رسیده و گرمسیری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب آناناس</h4>
-                                            <p>آب آناناس تازه و استوایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب هندوانه</h4>
-                                            <p>آب هندوانه خنک و شیرین تابستانی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب طالبی</h4>
-                                            <p>آب طالبی خوش‌عطر و طبیعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۱۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب طالبی بستنی</h4>
-                                            <p>آب طالبی با بستنی وانیلی خامه‌ای.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب کرفس</h4>
-                                            <p>آب کرفس تازه و سالم.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب انار</h4>
-                                            <p>آب انار طبیعی و اصیل ایرانی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب زرشک</h4>
-                                            <p>آب زرشک ترش و ملس.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب آلبالو</h4>
-                                            <p>آب آلبالو خوش‌طعم و طبیعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب شاتوت</h4>
-                                            <p>آب شاتوت تیره و آنتی‌اکسیدان بالا.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آب توت‌فرنگی</h4>
-                                            <p>آب توت‌فرنگی تازه و خوش‌رنگ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Ice Pack -->
-                            <div id="tab-ice-pack" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">آیس پک</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک کاکائو</h4>
-                                            <p>آیس پک خنک با طعم کاکائو و بستنی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک وانیل</h4>
-                                            <p>آیس پک با بستنی وانیلی و شیر سرد.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک شکلات تکه‌ای</h4>
-                                            <p>آیس پک با تکه‌های شکلات واقعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک کیت کت</h4>
-                                            <p>آیس پک با تکه‌های کیت کت ترد.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک کوکی</h4>
-                                            <p>آیس پک با خرده‌های کوکی شکلاتی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک نوتلا</h4>
-                                            <p>آیس پک شکلاتی با نوتلا واقعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک تیرامیسو</h4>
-                                            <p>آیس پک با طعم دسر تیرامیسو ایتالیایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک لوتوس</h4>
-                                            <p>آیس پک با بیسکویت لوتوس کاراملی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک بلوبری</h4>
-                                            <p>آیس پک با طعم میوه بلوبری تازه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک توت‌فرنگی</h4>
-                                            <p>آیس پک با توت‌فرنگی خنک و شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک انبه</h4>
-                                            <p>آیس پک با طعم انبه گرمسیری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک موز</h4>
-                                            <p>آیس پک موزی خامه‌ای و غلیظ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک طالبی</h4>
-                                            <p>آیس پک با طالبی تازه و خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک شاهتوت</h4>
-                                            <p>آیس پک با میوه شاهتوت تیره و طبیعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک موزانبه</h4>
-                                            <p>آیس پک ترکیبی موز و انبه استوایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک انبه شاهتوت</h4>
-                                            <p>آیس پک ترکیب انبه و شاهتوت.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک توت‌فرنگی طالبی</h4>
-                                            <p>آیس پک توت‌فرنگی و طالبی معطر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آیسپک بلوبری توت‌فرنگی</h4>
-                                            <p>آیس پک بلوبری و توت‌فرنگی، ترش و شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Ice Cream & Faloodeh -->
-                            <div id="tab-icecream-faloodeh" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">بستنی و فالوده</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انبه اسکوپی</h4>
-                                            <p>بستنی انبه اسکوپی، خامه‌ای و میوه‌ای.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>تیرامیسو اسکوپی</h4>
-                                            <p>بستنی با طعم تیرامیسو ایتالیایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>وانیل اسکوپی</h4>
-                                            <p>بستنی وانیلی کلاسیک و لطیف.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>طالبی اسکوپی</h4>
-                                            <p>بستنی طالبی خوش‌عطر و خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شاهتوت اسکوپی</h4>
-                                            <p>بستنی با طعم شاهتوت واقعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کارامل بادام زمینی اسکوپی</h4>
-                                            <p>بستنی کارامل با بادام زمینی کاراملی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کیت کت اسکوپی</h4>
-                                            <p>بستنی با تکه‌های کیت کت ترد.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کره گردو اسکوپی</h4>
-                                            <p>بستنی کره‌ای با گردو و طعمی خاص.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>نسکافه اسکوپی</h4>
-                                            <p>بستنی با طعم نسکافه گلد و قهوه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کوکی اسکوپی</h4>
-                                            <p>بستنی با خرده‌های کوکی شکلاتی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شکلات تلخ اسکوپی</h4>
-                                            <p>بستنی شکلات تلخ غلیظ و لوکس.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موز اسکوپی</h4>
-                                            <p>بستنی موزی شیرین و طبیعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>توت‌فرنگی اسکوپی</h4>
-                                            <p>بستنی توت‌فرنگی با تکه‌های میوه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کیک بستنی اسکوپی</h4>
-                                            <p>بستنی با طعم کیک اسفنجی و خامه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>وانیل پسته اسکوپی</h4>
-                                            <p>بستنی وانیل با پسته ایرانی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شکلات تکه‌ای اسکوپی</h4>
-                                            <p>بستنی شکلاتی با تکه‌های شکلات واقعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موزشکلات اسکوپی</h4>
-                                            <p>بستنی موز و شکلات، ترکیب محبوب.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>بلوبری اسکوپی</h4>
-                                            <p>بستنی بلوبری با تکه‌های میوه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>معجون ترش اسکوپی</h4>
-                                            <p>بستنی معجون با طعم ترش و خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کاکائو اسکوپی</h4>
-                                            <p>بستنی کاکائویی ساده و کلاسیک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>دستگاهی شکلات/وانیل</h4>
-                                            <p>بستنی دستگاهی با انتخاب طعم شکلات یا وانیل.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>دستگاهی شکلات/وانیل نیم کیلویی</h4>
-                                            <p>نیم کیلو بستنی دستگاهی شکلات یا وانیل.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سنتی زعفران خامه‌ای لیوانی</h4>
-                                            <p>بستنی سنتی زعفرانی با خامه تازه در لیوان.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سنتی زعفران خامه‌ای حصیری</h4>
-                                            <p>بستنی سنتی زعفرانی در نان حصیری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سنتی زعفران خامه‌ای نیم کیلویی</h4>
-                                            <p>نیم کیلو بستنی سنتی زعفرانی اعلا.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>فالوده</h4>
-                                            <p>فالوده شیرازی اصیل با شربت آلبالو یا لیمو.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>فالوده بستنی زعفرانی</h4>
-                                            <p>فالوده با یک اسکوپ بستنی سنتی زعفرانی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>فالوده بستنی وانیلی</h4>
-                                            <p>فالوده با بستنی وانیلی خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>فالوده نیم کیلویی</h4>
-                                            <p>نیم کیلو فالوده تازه و خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Milkshake -->
-                            <div id="tab-milkshake" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">میلک شیک (برپایه بستنی)</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک لوتوس</h4>
-                                            <p>شیک غلیظ با بیسکویت لوتوس کاراملی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک نوتلا</h4>
-                                            <p>شیک شکلاتی با نوتلا و بستنی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک فندق نوتلا</h4>
-                                            <p>شیک نوتلا با طعم فندق بوداده.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک موز کاکائو</h4>
-                                            <p>شیک موز با تکه‌های موز و کاکائو.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک بادام زمینی</h4>
-                                            <p>شیک با کره بادام زمینی و بستنی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک بلوبری</h4>
-                                            <p>شیک میوه‌ای بلوبری با بستنی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک توت‌فرنگی</h4>
-                                            <p>شیک خنک با توت‌فرنگی تازه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک ترش</h4>
-                                            <p>شیک با طعم ترش و دلچسب.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک انبه</h4>
-                                            <p>شیک انبه گرمسیری و غلیظ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک موز</h4>
-                                            <p>شیک موز ساده و مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک شاهتوت</h4>
-                                            <p>شیک با طعم شاهتوت طبیعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک طالبی</h4>
-                                            <p>شیک طالبی خنک و معطر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک وانیل</h4>
-                                            <p>شیک وانیلی ساده و لطیف.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک کوکی</h4>
-                                            <p>شیک با خرده‌های کوکی شکلاتی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک کیت کت</h4>
-                                            <p>شیک با تکه‌های کیت کت ترد.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک شکلات تکه‌ای</h4>
-                                            <p>شیک با تکه‌های شکلات واقعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک شکلات تلخ</h4>
-                                            <p>شیک شکلات تلخ ویژه عاشقان کاکائو.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک نسکافه</h4>
-                                            <p>شیک قهوه با نسکافه گلد و بستنی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک کاکائو</h4>
-                                            <p>شیک کلاسیک کاکائویی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیک تیرامیسو</h4>
-                                            <p>شیک با طعم دسر تیرامیسو ایتالیایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Milk Mix -->
-                            <div id="tab-milk-mix" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">میکس با شیر</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز</h4>
-                                            <p>شیر سرد با موز تازه و شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز بستنی</h4>
-                                            <p>شیرموز با یک اسکوپ بستنی وانیلی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز عسل</h4>
-                                            <p>شیرموز با عسل طبیعی و مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز خرما</h4>
-                                            <p>شیرموز با خرمای شیرین و انرژی‌زا.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۹۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز عسل خرما</h4>
-                                            <p>شیرموز با عسل و خرما، کامل و مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز بادام زمینی</h4>
-                                            <p>شیرموز با کره بادام زمینی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز بادام زمینی عسل</h4>
-                                            <p>ترکیب بادام زمینی، موز و عسل.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز نارگیل</h4>
-                                            <p>شیرموز با شیر نارگیل و پودر نارگیل.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرنارگیل</h4>
-                                            <p>شیر سرد با شیر نارگیل خالص.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز نوتلا</h4>
-                                            <p>شیرموز شکلاتی با نوتلا واقعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز شکلات</h4>
-                                            <p>شیرموز با سس شکلات غلیظ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۱۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز لوتوس</h4>
-                                            <p>شیرموز با بیسکویت لوتوس کاراملی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرطالبی</h4>
-                                            <p>شیر سرد با طالبی تازه و معطر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۲۵۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز طالبی</h4>
-                                            <p>ترکیب شیر، موز و طالبی خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرهویج</h4>
-                                            <p>شیر سرد با آب هویج تازه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز هویج</h4>
-                                            <p>شیر سرد با موز و هویج مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرانبه</h4>
-                                            <p>شیر سرد با انبه رسیده و شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز انبه</h4>
-                                            <p>ترکیب رویایی شیر، موز و انبه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرانبه بستنی</h4>
-                                            <p>شیرانبه با اسکوپ بستنی وانیلی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز انبه بستنی</h4>
-                                            <p>شیرموز انبه به همراه بستنی، دسر کامل.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۷۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیر توت‌فرنگی</h4>
-                                            <p>شیر سرد با توت‌فرنگی تازه و رنگارنگ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز توت‌فرنگی</h4>
-                                            <p>شیرموز و توت‌فرنگی، ترکیب خوش‌طعم.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۷۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرموز گردو</h4>
-                                            <p>شیرموز با گردوی تازه و مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">—</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Mixed Juice -->
-                            <div id="tab-mixed-juice" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">آبمیوه ترکیبی</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>هویج کرفس</h4>
-                                            <p>ترکیب آب هویج و کرفس، سالم و کم‌کالری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>هویج پرتقال</h4>
-                                            <p>آب هویج و پرتقال، سرشار از ویتامین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب آناناس</h4>
-                                            <p>آب سیب و آناناس، شیرین و استوایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب پرتقال</h4>
-                                            <p>آب سیب و پرتقال، کلاسیک و دلپذیر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب انبه</h4>
-                                            <p>آب سیب با طعم انبه گرمسیری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انبه شاتوت</h4>
-                                            <p>ترکیب انبه و شاتوت، آنتی‌اکسیدان بالا.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انبه آناناس</h4>
-                                            <p>انبه و آناناس، یک مهمانی گرمسیری.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۴,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موز انبه</h4>
-                                            <p>شیرینی موز با انبه، غلیظ و خوشمزه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موز آناناس</h4>
-                                            <p>موز و آناناس، یک نوشیدنی استوایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>موز انبه آناناس</h4>
-                                            <p>سه میوه استوایی، لذت ناب.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۴,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انبه پرتقال</h4>
-                                            <p>انبه و پرتقال، ترکیبی ویتامینه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انبه توت‌فرنگی</h4>
-                                            <p>انبه با توت‌فرنگی، رنگ و طعم عالی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب موز</h4>
-                                            <p>آب سیب و موز، شیرین و مقوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب توت‌فرنگی</h4>
-                                            <p>آب سیب و توت‌فرنگی، خوش‌رنگ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب کرفس</h4>
-                                            <p>آب سیب و کرفس، سم‌زدای طبیعی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب کرفس لیمو</h4>
-                                            <p>آب سیب، کرفس و لیمو ترش، طعمی تازه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>کرفس لیمو</h4>
-                                            <p>آب کرفس و لیمو ترش، سالم و انرژی‌بخش.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>سیب هویج</h4>
-                                            <p>آب سیب و هویج، کلاسیک و سالم.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آناناس توت‌فرنگی</h4>
-                                            <p>آناناس با توت‌فرنگی، ترش و شیرین.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آلبالو پرتقال</h4>
-                                            <p>آب آلبالو و پرتقال، ملس و خنک.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>پرتقال توت‌فرنگی</h4>
-                                            <p>پرتقال و توت‌فرنگی، ویتامین C مضاعف.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۳۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>پرتقال شاتوت</h4>
-                                            <p>پرتقال و شاتوت، رنگ و طعم بی‌نظیر.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>پرتقال کرفس</h4>
-                                            <p>پرتقال و کرفس، نوشیدنی سلامتی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>پرتقال آناناس</h4>
-                                            <p>پرتقال با آناناس، شیرین و استوایی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>هندوانه توت‌فرنگی</h4>
-                                            <p>آب هندوانه و توت‌فرنگی، خنک تابستانی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انار پرتقال</h4>
-                                            <p>آب انار و پرتقال، مقوی و خوش‌رنگ.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۶۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انار شاتوت</h4>
-                                            <p>انار و شاتوت، آنتی‌اکسیدان قوی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>انار آلبالو</h4>
-                                            <p>آب انار و آلبالو، ترش و دلچسب.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۱,۴۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>آلبالو شاتوت</h4>
-                                            <p>آلبالو و شاتوت، ترکیب تیره و خوش‌طعم.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۲,۵۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>میکس سرخ(آلبالو،توت‌فرنگی،شاتوت)</h4>
-                                            <p>آلبالو، توت‌فرنگی و شاتوت؛ سه‌گانه قرمز.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۲۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Vitamin (Special) -->
-                            <div id="tab-vitamin" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">ویتامینه</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>معجون مخصوص (بستنی معجون ،پودر نارگیل،موز،آناناس،4مغز،عسل،سس شکلات)</h4>
-                                            <p>بستنی معجون، پودر نارگیل، موز، آناناس، ۴ مغز، عسل و سس شکلات.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۵,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>معجون میکس (بستنی معجون ،پودر نارگیل،موز،آناناس،4مغز،عسل،سس شکلات)</h4>
-                                            <p>نسخه ترکیبی معجون با همان مواد اولیه عالی.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۵,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرپسته (بستنی وانیل پسته،موز، آنااناس،عسل ،سس شکلات،مغز پسته)</h4>
-                                            <p>بستنی وانیل پسته، موز، آناناس، عسل، سس شکلات و مغز پسته.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۵,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>شیرپسته میکس (بستنی وانیل پسته،موز، آنااناس،عسل ،سس شکلات،مغز پسته)</h4>
-                                            <p>ترکیب ویژه شیرپسته با بستنی و مغزها.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۵,۰۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Waffle -->
-                            <div id="tab-waffle" class="menu-block__group tab-content__item">
-                                <h6 class="menu-block__cat-name">وافل</h6>
-                                <ul class="menu-list">
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>وافل میوه‌ای(وافل ، سس نوتلا ، موز ، توت‌فرنگی ، آناناس)</h4>
-                                            <p>وافل با نوتلا، موز، توت‌فرنگی، انبه و آناناس تازه.</p>
-                                        </div>
-                                        <div class="menu-list__item-price">۳,۸۰۰,۰۰۰ ريال</div>
-                                    </li>
-                                    <li class="menu-list__item">
-                                        <div class="menu-list__item-desc">
-                                            <h4>وافل بستنی اسکوپی (وافل ، سس نوتلا ، موز ، آناناس ، توت‌فرنگی ، 3اسکوپ بستنی
-                                                )</h4>
-                                                <p>وافل با نوتلا، میوه و ۳ اسکوپ بستنی شکلاتی.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۵۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Water & Cake -->
-                                <div id="tab-water-cake" class="menu-block__group tab-content__item">
-                                    <h6 class="menu-block__cat-name">آب و کیک</h6>
-                                    <ul class="menu-list">
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>آب معدنی</h4>
-                                                <p>بطری آب معدنی خنک.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲۵۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>کیک اسفنجی</h4>
-                                                <p>کیک اسفنجی ساده و نرم.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>باقلوا</h4>
-                                                <p>باقلوا شیرین و سنتی.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۶۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>شکلات خیس</h4>
-                                                <p>کیک شکلاتی خیس و لطیف.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">—</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>تیرامیسو</h4>
-                                                <p>دسر ایتالیایی تیرامیسو با پنیر ماسکارپونه.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">—</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>دوغ گوشفیل</h4>
-                                                <p>دوغ سنتی با گوشفیل خنک و گوارا.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۱,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Liter Juices -->
-                                <div id="tab-juice-liter" class="menu-block__group tab-content__item">
-                                    <h6 class="menu-block__cat-name">آبمیوه لیتری</h6>
-                                    <ul class="menu-list">
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>هویج ۱ لیتری</h4>
-                                                <p>آب هویج تازه در بسته‌بندی یک لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۱,۹۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>هویج ۱.۵ لیتری</h4>
-                                                <p>آب هویج تازه در بسته‌بندی یک و نیم لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۸۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>سیب ۱ لیتری</h4>
-                                                <p>آب سیب طبیعی ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۸۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>سیب ۱.۵ لیتری</h4>
-                                                <p>آب سیب طبیعی ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>سیب هویج ۱ لیتری</h4>
-                                                <p>ترکیب سیب و هویج در بسته‌بندی ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۵۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>سیب هویج ۱.۵ لیتری</h4>
-                                                <p>ترکیب سیب و هویج ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۶۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>پرتقال ۱ لیتری</h4>
-                                                <p>آب پرتقال تازه ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۵۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>پرتقال ۱.۵ لیتری</h4>
-                                                <p>آب پرتقال ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۵,۲۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>سیب پرتقال ۱ لیتری</h4>
-                                                <p>آب سیب و پرتقال ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۲۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>سیب پرتقال ۱.۵ لیتری</h4>
-                                                <p>آب سیب و پرتقال ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۸۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>طالبی ۱ لیتری</h4>
-                                                <p>آب طالبی تازه ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۲۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>طالبی ۱.۵ لیتری</h4>
-                                                <p>آب طالبی ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۳۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>هندوانه ۱ لیتری</h4>
-                                                <p>آب هندوانه ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>هندوانه ۱.۵ لیتری</h4>
-                                                <p>آب هندوانه ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>انبه ۱ لیتری</h4>
-                                                <p>آب انبه ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۵,۴۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>انبه ۱.۵ لیتری</h4>
-                                                <p>آب انبه ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۸,۴۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>آناناس ۱ لیتری</h4>
-                                                <p>آب آناناس ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۷,۵۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>آناناس ۱.۵ لیتری</h4>
-                                                <p>آب آناناس ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۱۱,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>کرفس ۱ لیتری</h4>
-                                                <p>آب کرفس ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>کرفس ۱.۵ لیتری</h4>
-                                                <p>آب کرفس ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>انار ۱ لیتری</h4>
-                                                <p>آب انار ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۸۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>انار ۱.۵ لیتری</h4>
-                                                <p>آب انار ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۳۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>شاهتوت ۱ لیتری</h4>
-                                                <p>آب شاهتوت ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">—</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>شاهتوت ۱.۵ لیتری</h4>
-                                                <p>آب شاهتوت ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">—</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>زرشک ۱ لیتری</h4>
-                                                <p>آب زرشک ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۳,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>زرشک ۱.۵ لیتری</h4>
-                                                <p>آب زرشک ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۵۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>آلبالو ۱ لیتری</h4>
-                                                <p>آب آلبالو ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۲,۸۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>آلبالو ۱.۵ لیتری</h4>
-                                                <p>آب آلبالو ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۳۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>توت‌فرنگی ۱ لیتری</h4>
-                                                <p>آب توت‌فرنگی ۱ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۴,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                        <li class="menu-list__item">
-                                            <div class="menu-list__item-desc">
-                                                <h4>توت‌فرنگی ۱.۵ لیتری</h4>
-                                                <p>آب توت‌فرنگی ۱.۵ لیتری.</p>
-                                            </div>
-                                            <div class="menu-list__item-price">۶,۰۰۰,۰۰۰ ريال</div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div> <!-- menu-block -->
-
-                        </div> <!-- end s-menu__content-end -->
-
-                    </div> <!-- end s-menu__content -->
-
-                </section> <!-- end s-menu -->
-
-                @* <section id="menu-cards" class="container s-menu target-section">
+    @* <section id="menu-cards" class="container s-menu target-section">
 
                 <div class="row s-menu__content">
 
@@ -4043,9 +2438,9 @@
                     </section> <!-- end s-menu --> *@
 
 
-                <!-- # gallery
+    <!-- # gallery
         ================================================== -->
-                @* <section id="gallery" class="container s-gallery target-section">
+    @* <section id="gallery" class="container s-gallery target-section">
 
                 <div class="row s-gallery__header">
                     <div class="column xl-12 section-header-wrap">
@@ -4109,426 +2504,426 @@
 
             </section> *@
 
-                <!-- # gallery premium
+    <!-- # gallery premium
         ================================================== -->
-                <section id="gallery-premium" class="container s-gallery-premium target-section">
+    <section id="gallery-premium" class="container s-gallery-premium target-section">
 
-                    <div class="row s-gallery__header">
-                        <div class="column xl-12 section-header-wrap">
-                            <div class="section-header">
-                                <h2 class="text-display-title">گالری تصاویر</h2>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row s-gallery__header">
+            <div class="column xl-12 section-header-wrap">
+                <div class="section-header">
+                    <h2 class="text-display-title">گالری تصاویر</h2>
+                </div>
+            </div>
+        </div>
 
-                    <div class="gallery-premium">
+        <div class="gallery-premium">
 
-                        <div class="gallery-decor gallery-decor--citrus"></div>
-                        <div class="gallery-decor gallery-decor--leaf"></div>
-                        <div class="gallery-decor gallery-decor--blur-1"></div>
-                        <div class="gallery-decor gallery-decor--blur-2"></div>
+            <div class="gallery-decor gallery-decor--citrus"></div>
+            <div class="gallery-decor gallery-decor--leaf"></div>
+            <div class="gallery-decor gallery-decor--blur-1"></div>
+            <div class="gallery-decor gallery-decor--blur-2"></div>
 
-                        <div class="gallery-premium__item gallery-premium__item--1 gp-reveal" data-delay="0">
-                            <a href="images/IceLandMenu/file_0000000070a07246820c313117837a40.png" class="glightbox">
-                                <img src="images/IceLandMenu/file_0000000070a07246820c313117837a40.png" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--1 gp-reveal" data-delay="0">
+                <a href="images/IceLandMenu/file_0000000070a07246820c313117837a40.png" class="glightbox">
+                    <img src="images/IceLandMenu/file_0000000070a07246820c313117837a40.png" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--2 gp-reveal" data-delay="100">
-                            <a href="images/IceLandMenu/file_0000000034e8724699bc585b556cad73.png" class="glightbox">
-                                <img src="images/IceLandMenu/file_0000000034e8724699bc585b556cad73.png" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--2 gp-reveal" data-delay="100">
+                <a href="images/IceLandMenu/file_0000000034e8724699bc585b556cad73.png" class="glightbox">
+                    <img src="images/IceLandMenu/file_0000000034e8724699bc585b556cad73.png" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--3 gp-reveal" data-delay="200">
-                            <a href="images/IceLandMenu/20260705_141856.jpg" class="glightbox">
-                                <img src="images/IceLandMenu/20260705_141856.jpg" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--3 gp-reveal" data-delay="200">
+                <a href="images/IceLandMenu/20260705_141856.jpg" class="glightbox">
+                    <img src="images/IceLandMenu/20260705_141856.jpg" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--4 gp-reveal" data-delay="300">
-                            <a href="images/IceLandMenu/20260705_140122.jpg" class="glightbox">
-                                <img src="images/IceLandMenu/20260705_140122.jpg" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--4 gp-reveal" data-delay="300">
+                <a href="images/IceLandMenu/20260705_140122.jpg" class="glightbox">
+                    <img src="images/IceLandMenu/20260705_140122.jpg" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--5 gp-reveal" data-delay="150">
-                            <a href="images/IceLandMenu/20260705_134559.jpg" class="glightbox">
-                                <img src="images/IceLandMenu/20260705_134559.jpg" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--5 gp-reveal" data-delay="150">
+                <a href="images/IceLandMenu/20260705_134559.jpg" class="glightbox">
+                    <img src="images/IceLandMenu/20260705_134559.jpg" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--6 gp-reveal" data-delay="250">
-                            <a href="images/IceLandMenu/20260705_133336.jpg" class="glightbox">
-                                <img src="images/IceLandMenu/20260705_133336.jpg" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--6 gp-reveal" data-delay="250">
+                <a href="images/IceLandMenu/20260705_133336.jpg" class="glightbox">
+                    <img src="images/IceLandMenu/20260705_133336.jpg" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--7 gp-reveal" data-delay="350">
-                            <a href="images/IceLandMenu/20260704_141927.jpg" class="glightbox">
-                                <img src="images/IceLandMenu/20260704_141927.jpg" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--7 gp-reveal" data-delay="350">
+                <a href="images/IceLandMenu/20260704_141927.jpg" class="glightbox">
+                    <img src="images/IceLandMenu/20260704_141927.jpg" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                        <div class="gallery-premium__item gallery-premium__item--8 gp-reveal" data-delay="200">
-                            <a href="images/IceLandMenu/20260704_135647.jpg" class="glightbox">
-                                <img src="images/IceLandMenu/20260704_135647.jpg" alt="منوی آیس لند">
-                            </a>
-                        </div>
+            <div class="gallery-premium__item gallery-premium__item--8 gp-reveal" data-delay="200">
+                <a href="images/IceLandMenu/20260704_135647.jpg" class="glightbox">
+                    <img src="images/IceLandMenu/20260704_135647.jpg" alt="منوی آیس لند">
+                </a>
+            </div>
 
-                    </div>
+        </div>
 
-                </section>
+    </section>
 
 
-                <!-- # About & Contact Combined
+    <!-- # About & Contact Combined
         ================================================== -->
-                <section id="about-contact" class="container s-about-contact target-section">
+    <section id="about-contact" class="container s-about-contact target-section">
 
-                    @* <div class="row section-header-wrap-u-center">
+        @* <div class="row section-header-wrap-u-center">
                     <div class="section-header" style="text-align: center; width: 100%;">
                         <h2 class="text-display-title">داستان ما / تماس با ما</h2>
                     </div>
                 </div> *@
 
-                    <div class="row about-contact__grid">
+        <div class="row about-contact__grid">
 
-                        <!-- Left Column: About Story -->
-                        <div class="column xl-6 lg-6 md-12 about-contact__story">
-                            <div class="about-contact__card">
+            <!-- Left Column: About Story -->
+            <div class="column xl-6 lg-6 md-12 about-contact__story">
+                <div class="about-contact__card">
 
-                                <span class="story-badge">✦ داستان آیس لند</span>
+                    <span class="story-badge">✦ داستان آیس لند</span>
 
-                                <p class="story-quote">
-                                    «از سال ۱۴۰۴ میزبان حضور گرمتان هستیم»
-                                </p>
+                    <p class="story-quote">
+                        «از سال ۱۴۰۴ میزبان حضور گرمتان هستیم»
+                    </p>
 
-                                <p class="story-text">
-                                    مجموعه تریا آیس لند همواره در تلاش بوده با بهره‌گیری از مواد اولیه ممتاز و با
-                                    کیفیت، خاطره‌ای به‌یادماندنی و ماندگار برای مشتریان عزیز به ارمغان آورد.
-                                    تیم آیس‌لند می‌کوشد اکثریت عموم مردم را جذب و در عرصه خدمات‌رسانی به
-                                    همشهریان عزیز ذره‌ای دریغ نکند. با آیس‌لند همراه طعم‌های ماندگار باشید.
-                                </p>
+                    <p class="story-text">
+                        مجموعه تریا آیس لند همواره در تلاش بوده با بهره‌گیری از مواد اولیه ممتاز و با
+                        کیفیت، خاطره‌ای به‌یادماندنی و ماندگار برای مشتریان عزیز به ارمغان آورد.
+                        تیم آیس‌لند می‌کوشد اکثریت عموم مردم را جذب و در عرصه خدمات‌رسانی به
+                        همشهریان عزیز ذره‌ای دریغ نکند. با آیس‌لند همراه طعم‌های ماندگار باشید.
+                    </p>
 
-                                <ul class="about-contact__info">
-                                    <li>
-                                        <span class="info-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path
-                                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                                                <circle cx="12" cy="9" r="2.5" />
-                                            </svg>
-                                        </span>
-                                        <span>اصفهان، چهارباغ پایین، بعد از بانک ملی، نبش پاساژ عبداللهی</span>
-                                    </li>
-                                    <li>
-                                        <span class="info-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path
-                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                            </svg>
-                                        </span>
-                                        <a href="tel:09138654066">۰۹۱۳۸۶۵۴۰۶۶</a> | <a href="tel:09134674857">۰۹۱۳۴۶۷۴۸۵۷</a>
-                                    </li>
-                                    <li>
-                                        <span class="info-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                                            </svg>
-                                        </span>
-                                        <a href="https://instagram.com/iceland.icecream_coffee"
-                                           target="_blank">iceland.icecream_coffee</a>
-                                    </li>
-                                </ul>
-                                <div class="about-contact__maps">
-                                    <iframe
-                                        src="https://www.google.com/maps?q=32.658996388345194,51.66918489405233&z=17&output=embed"
-                                        allowfullscreen="" loading="lazy">
-                                    </iframe>
-                                </div>
+                    <ul class="about-contact__info">
+                        <li>
+                            <span class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                                    <circle cx="12" cy="9" r="2.5" />
+                                </svg>
+                            </span>
+                            <span>اصفهان، چهارباغ پایین، بعد از بانک ملی، نبش پاساژ عبداللهی</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </span>
+                            <a href="tel:09138654066">۰۹۱۳۸۶۵۴۰۶۶</a> | <a href="tel:09134674857">۰۹۱۳۴۶۷۴۸۵۷</a>
+                        </li>
+                        <li>
+                            <span class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </span>
+                            <a href="https://instagram.com/iceland.icecream_coffee"
+                               target="_blank">iceland.icecream_coffee</a>
+                        </li>
+                    </ul>
+                    <div class="about-contact__maps">
+                        <iframe
+                            src="https://www.google.com/maps?q=32.658996388345194,51.66918489405233&z=17&output=embed"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="column xl-6 lg-6 md-12 about-contact__form">
+                <div class="about-contact__card">
+
+                    <h3>تماس با ما</h3>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="contactName">نام و نام خانوادگی</label>
+                            <input type="text" id="contactName" placeholder="نام خود را وارد کنید">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">ایمیل شما</label>
+                            <input type="email" id="contactEmail" placeholder="example@mail.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">علت تماس</label>
+                            <div class="ss-custom-select">
+                                <select id="contactSubject">
+                                    <option value="سوالات">سوالات</option>
+                                    <option value="گزارش">گزارش</option>
+                                    <option value="پیشنهاد">پیشنهاد</option>
+                                    <option value="سایر">سایر</option>
+                                </select>
                             </div>
                         </div>
 
-                        <!-- Right Column: Contact Form -->
-                        <div class="column xl-6 lg-6 md-12 about-contact__form">
-                            <div class="about-contact__card">
-
-                                <h3>تماس با ما</h3>
-
-                                <form>
-                                    <div class="form-group">
-                                        <label for="contactName">نام و نام خانوادگی</label>
-                                        <input type="text" id="contactName" placeholder="نام خود را وارد کنید">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="contactEmail">ایمیل شما</label>
-                                        <input type="email" id="contactEmail" placeholder="example@mail.com">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="contactSubject">علت تماس</label>
-                                        <div class="ss-custom-select">
-                                            <select id="contactSubject">
-                                                <option value="سوالات">سوالات</option>
-                                                <option value="گزارش">گزارش</option>
-                                                <option value="پیشنهاد">پیشنهاد</option>
-                                                <option value="سایر">سایر</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="contactMessage">پیام شما</label>
-                                        <textarea id="contactMessage" placeholder="پیام خود را بنویسید..."></textarea>
-                                    </div>
-
-                                    <button type="submit" class="submit-btn">
-                                        <span>ارسال پیام</span>
-                                    </button>
-                                </form>
-
-                            </div>
+                        <div class="form-group">
+                            <label for="contactMessage">پیام شما</label>
+                            <textarea id="contactMessage" placeholder="پیام خود را بنویسید..."></textarea>
                         </div>
 
-                    </div> <!-- end about-contact__grid -->
+                        <button type="submit" class="submit-btn">
+                            <span>ارسال پیام</span>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div> <!-- end about-contact__grid -->
 
                
 
-                </section> <!-- end s-about-contact -->
+    </section> <!-- end s-about-contact -->
 
 
-                <!-- # testimonials
+    <!-- # testimonials
         ================================================== -->
-                <section id="testimonials" class="container s-testimonials">
+    <section id="testimonials" class="container s-testimonials">
 
-                    <div class="row s-testimonials__content">
-                        <div class="column xl-12">
+        <div class="row s-testimonials__content">
+            <div class="column xl-12">
 
-                            <h3 class="testimonials-title u-text-center">نظر مشتریان ما</h3>
+                <h3 class="testimonials-title u-text-center">نظر مشتریان ما</h3>
 
-                            <div class="swiper-container testimonials-slider">
-                                <div class="swiper-wrapper">
+                <div class="swiper-container testimonials-slider">
+                    <div class="swiper-wrapper">
 
-                                    <div class="testimonials-slider__slide swiper-slide">
-                                        <div class="testimonials-slider__author">
-                                            <img src="images/avatars/user-02.jpg" alt="تصویر مشتری"
-                                                 class="testimonials-slider__avatar">
-                                            <cite class="testimonials-slider__cite">
-                                                علی احمدی
-                                                <span>اصفهان</span>
-                                            </cite>
-                                        </div>
-                                        <p>
-                                            بهترین بستنی سنتی شهر همینجاست! فالوده و شیک موزش هم عالیه. محیط خیلی گرم و
-                                            دوستانه‌ای داره.
-                                            همیشه با خانواده میایم و لذت می‌بریم.
-                                        </p>
-                                    </div> <!-- end testimonials-slider__slide -->
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <div class="testimonials-slider__author">
+                                <img src="images/avatars/user-02.jpg" alt="تصویر مشتری"
+                                     class="testimonials-slider__avatar">
+                                <cite class="testimonials-slider__cite">
+                                    علی احمدی
+                                    <span>اصفهان</span>
+                                </cite>
+                            </div>
+                            <p>
+                                بهترین بستنی سنتی شهر همینجاست! فالوده و شیک موزش هم عالیه. محیط خیلی گرم و
+                                دوستانه‌ای داره.
+                                همیشه با خانواده میایم و لذت می‌بریم.
+                            </p>
+                        </div> <!-- end testimonials-slider__slide -->
 
-                                    <div class="testimonials-slider__slide swiper-slide">
-                                        <div class="testimonials-slider__author">
-                                            <img src="images/avatars/user-03.jpg" alt="تصویر مشتری"
-                                                 class="testimonials-slider__avatar">
-                                            <cite class="testimonials-slider__cite">
-                                                رضا کریمی
-                                                <span>اصفهان</span>
-                                            </cite>
-                                        </div>
-                                        <p>
-                                            قهوه تخصصی درجه یک و فضایی آروم برای قرارهای دوستانه. بستنی شون هم فوق‌العاده‌ست.
-                                            به نظرم جزو بهترین کافه‌های چهارباغه.
-                                        </p>
-                                    </div> <!-- end testimonials-slider__slide -->
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <div class="testimonials-slider__author">
+                                <img src="images/avatars/user-03.jpg" alt="تصویر مشتری"
+                                     class="testimonials-slider__avatar">
+                                <cite class="testimonials-slider__cite">
+                                    رضا کریمی
+                                    <span>اصفهان</span>
+                                </cite>
+                            </div>
+                            <p>
+                                قهوه تخصصی درجه یک و فضایی آروم برای قرارهای دوستانه. بستنی شون هم فوق‌العاده‌ست.
+                                به نظرم جزو بهترین کافه‌های چهارباغه.
+                            </p>
+                        </div> <!-- end testimonials-slider__slide -->
 
-                                    <div class="testimonials-slider__slide swiper-slide">
-                                        <div class="testimonials-slider__author">
-                                            <img src="images/avatars/user-01.jpg" alt="تصویر مشتری"
-                                                 class="testimonials-slider__avatar">
-                                            <cite class="testimonials-slider__cite">
-                                                سارا موسوی
-                                                <span>اصفهان</span>
-                                            </cite>
-                                        </div>
-                                        <p>
-                                            عاشق وافل و بستنی‌شون هستم. تازگی و کیفیت مواد واقعاً حس می‌شه. پرسنل خوش‌برخورد
-                                            و محیط تمیز. به همه پیشنهاد می‌کنم.
-                                        </p>
-                                    </div> <!-- end testimonials-slider__slide -->
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <div class="testimonials-slider__author">
+                                <img src="images/avatars/user-01.jpg" alt="تصویر مشتری"
+                                     class="testimonials-slider__avatar">
+                                <cite class="testimonials-slider__cite">
+                                    سارا موسوی
+                                    <span>اصفهان</span>
+                                </cite>
+                            </div>
+                            <p>
+                                عاشق وافل و بستنی‌شون هستم. تازگی و کیفیت مواد واقعاً حس می‌شه. پرسنل خوش‌برخورد
+                                و محیط تمیز. به همه پیشنهاد می‌کنم.
+                            </p>
+                        </div> <!-- end testimonials-slider__slide -->
 
-                                    <div class="testimonials-slider__slide swiper-slide">
-                                        <div class="testimonials-slider__author">
-                                            <img src="images/avatars/user-06.jpg" alt="تصویر مشتری"
-                                                 class="testimonials-slider__avatar">
-                                            <cite class="testimonials-slider__cite">
-                                                علی ناظمی
-                                                <span>اصفهان</span>
-                                            </cite>
-                                        </div>
-                                        <p>
-                                            هر وقت هوس یه شیک خنک یا فالوده اصیل می‌کنم، آیس لند انتخاب اولمه. کیفیت ثابت و
-                                            طعم‌های
-                                            متنوع. دستشون درد نکنه.
-                                        </p>
-                                    </div> <!-- end testimonials-slider__slide -->
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <div class="testimonials-slider__author">
+                                <img src="images/avatars/user-06.jpg" alt="تصویر مشتری"
+                                     class="testimonials-slider__avatar">
+                                <cite class="testimonials-slider__cite">
+                                    علی ناظمی
+                                    <span>اصفهان</span>
+                                </cite>
+                            </div>
+                            <p>
+                                هر وقت هوس یه شیک خنک یا فالوده اصیل می‌کنم، آیس لند انتخاب اولمه. کیفیت ثابت و
+                                طعم‌های
+                                متنوع. دستشون درد نکنه.
+                            </p>
+                        </div> <!-- end testimonials-slider__slide -->
 
-                                </div> <!-- end swiper-wrapper -->
+                    </div> <!-- end swiper-wrapper -->
 
-                                <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination"></div>
 
-                            </div> <!-- end testimonials-slider -->
+                </div> <!-- end testimonials-slider -->
 
-                        </div> <!-- end column -->
-                    </div> <!-- end s-testimonials__content -->
+            </div> <!-- end column -->
+        </div> <!-- end s-testimonials__content -->
 
-                </section> <!-- end s-testimonials -->
+    </section> <!-- end s-testimonials -->
 
     
-                <!-- # footer 
+    <!-- # footer 
         ================================================== -->
-                <footer id="footer" class="container s-footer">
+    <footer id="footer" class="container s-footer">
 
-                    <div class="row s-footer__top row-x-center">
-                    </div> <!-- end s-footer__top -->
+        <div class="row s-footer__top row-x-center">
+        </div> <!-- end s-footer__top -->
 
-                    <div class="row s-footer__main">
-                        <div class="column xl-3 lg-12 footer-block s-footer__main-start">
+        <div class="row s-footer__main">
+            <div class="column xl-3 lg-12 footer-block s-footer__main-start">
 
-                            <div class="s-footer__logo">
-                                <a class="logo" href="index.html">
-                                    <img src="/images/logo.jpg" alt="آیس لند" style="max-width: 100px;">
-                                </a>
-                            </div>
+                <div class="s-footer__logo">
+                    <a class="logo" href="index.html">
+                        <img src="/images/logo.jpg" alt="آیس لند" style="max-width: 100px;">
+                    </a>
+                </div>
 
-                            <ul class="s-footer__social social-list">
-                                <li>
-                                    <a href="https://instagram.com/iceland.icecream_coffee">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                             style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                            <path
-                                                d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z">
-                                            </path>
-                                            <circle cx="16.806" cy="7.207" r="1.078"></circle>
-                                            <path
-                                                d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z">
-                                            </path>
-                                        </svg>
-                                        <span class="u-screen-reader-text">اینستاگرام</span>
-                                    </a>
-                                </li>
-                            </ul> <!--end s-footer__social -->
+                <ul class="s-footer__social social-list">
+                    <li>
+                        <a href="https://instagram.com/iceland.icecream_coffee">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                <path
+                                    d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z">
+                                </path>
+                                <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                                <path
+                                    d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z">
+                                </path>
+                            </svg>
+                            <span class="u-screen-reader-text">اینستاگرام</span>
+                        </a>
+                    </li>
+                </ul> <!--end s-footer__social -->
 
-                        </div> <!-- end s-footer__main-start -->
+            </div> <!-- end s-footer__main-start -->
 
             
-                        <div class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap">
+            <div class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap">
 
-                            <div class="grid-cols__column footer-block">
-                                <h6>آدرس</h6>
-                                <p>
-                                    اصفهان، چهارباغ پایین،<br>
-                                    بعد از بانک ملی، نبش پاساژ عبداللهی
-                                </p>
-                            </div>
+                <div class="grid-cols__column footer-block">
+                    <h6>آدرس</h6>
+                    <p>
+                        اصفهان، چهارباغ پایین،<br>
+                        بعد از بانک ملی، نبش پاساژ عبداللهی
+                    </p>
+                </div>
 
-                            <div class="grid-cols__column footer-block">
-                                <h6>تماس</h6>
-                                <ul class="link-list">
-                                    <li><a href="tel:09138654066">۰۹۱۳۸۶۵۴۰۶۶</a> | <a href="tel:09134674857">۰۹۱۳۴۶۷۴۸۵۷</a>
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="grid-cols__column footer-block">
+                    <h6>تماس</h6>
+                    <ul class="link-list">
+                        <li><a href="tel:09138654066">۰۹۱۳۸۶۵۴۰۶۶</a> | <a href="tel:09134674857">۰۹۱۳۴۶۷۴۸۵۷</a>
+                        </li>
+                    </ul>
+                </div>
 
-                            <div class="grid-cols__column footer-block">
-                                <h6>ساعت کاری</h6>
-                                <ul class="opening-hours">
-                                    <li><span class="opening-hours__days"> شنبه تا پنج‌شنبه </span> <span
-                                        class="opening-hours__time"> ۱۰ صبح تا ۱ شب </span></li>
-                                        <li><span class="opening-hours__days">جمعه</span><span class="opening-hours__time">۱۲ صبح تا
-                                            ۱ شب</span></li>
-                                        </ul>
-                                        <p style="margin-top: 1rem;"><strong>سفارشات مجالس پذیرفته می‌شود.</strong></p>
-                                    </div>
+                <div class="grid-cols__column footer-block">
+                    <h6>ساعت کاری</h6>
+                    <ul class="opening-hours">
+                        <li><span class="opening-hours__days"> شنبه تا پنج‌شنبه </span> <span
+                            class="opening-hours__time"> ۱۰ صبح تا ۱ شب </span></li>
+                            <li><span class="opening-hours__days">جمعه</span><span class="opening-hours__time">۱۲ صبح تا
+                                ۱ شب</span></li>
+                            </ul>
+                            <p style="margin-top: 1rem;"><strong>سفارشات مجالس پذیرفته می‌شود.</strong></p>
+                        </div>
 
-                                </div> <!-- s-footer__main-end -->
+                    </div> <!-- s-footer__main-end -->
 
-                            </div> <!-- end  s-footer__main-content -->
+                </div> <!-- end  s-footer__main-content -->
 
-                            <div class="row s-footer__bottom">
+                <div class="row s-footer__bottom">
 
-                                <div class="column xl-6 lg-12">
-                                    <p class="ss-copyright">
-                                        <span>© آیس لند ۲۰۲۶</span>
-                                        <span>طراحی توسط <a href="https://bizaptech.ir/">شرکت بیتا زر اندیش پارس</a></span>
-                                    </p>
-                                </div>
+                    <div class="column xl-6 lg-12">
+                        <p class="ss-copyright">
+                            <span>© آیس لند ۲۰۲۶</span>
+                            <span>طراحی توسط <a href="https://bizaptech.ir/">شرکت بیتا زر اندیش پارس</a></span>
+                        </p>
+                    </div>
 
-                            </div> <!-- end s-footer__bottom -->
+                </div> <!-- end s-footer__bottom -->
 
-                            <div class="ss-go-top">
-                                <a class="smoothscroll" title="بازگشت به بالا" href="#top">
-                                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                        d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                        fill-rule="nonzero" />
-                                    </svg>
-                                </a>
-                                <span>بازگشت به بالا</span>
-                            </div> <!-- end ss-go-top -->
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="بازگشت به بالا" href="#top">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                            d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
+                            fill-rule="nonzero" />
+                        </svg>
+                    </a>
+                    <span>بازگشت به بالا</span>
+                </div> <!-- end ss-go-top -->
 
-                        </footer> <!-- end s-footer -->
+            </footer> <!-- end s-footer -->
 
-                    </div> <!-- end page-wrap -->
+        </div> <!-- end page-wrap -->
 
 
-                    <!-- Java Script
+        <!-- Java Script
     ================================================== -->
-                    <script src="js/plugins.js"></script>
-                    <script src="js/main.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-                    <script>
-                        (function () {
-                        var items = document.querySelectorAll('.gp-reveal');
-                        if (!items.length) return;
+        <script>
+                (function () {
+                    var items = document.querySelectorAll('.gp-reveal');
+                    if (!items.length) return;
 
-                        function reveal(el) {
+                    function reveal(el) {
                         if (el.classList.contains('gp-visible')) return;
                         var delay = parseInt(el.getAttribute('data-delay')) || 0;
                         setTimeout(function () {
-                        el.classList.add('gp-visible');
+                            el.classList.add('gp-visible');
                         }, delay);
-                        }
+                    }
 
-                        function checkVisibility() {
+                    function checkVisibility() {
                         var windowH = window.innerHeight;
                         items.forEach(function (el) {
-                        var rect = el.getBoundingClientRect();
-                        if (rect.top < windowH * 0.9) {
-                        reveal(el);
-                        }
+                            var rect = el.getBoundingClientRect();
+                            if (rect.top < windowH * 0.9) {
+                                reveal(el);
+                            }
                         });
-                        }
+                    }
 
-                        checkVisibility();
+                    checkVisibility();
 
-                        var ticking = false;
-                        window.addEventListener('scroll', function () {
+                    var ticking = false;
+                    window.addEventListener('scroll', function () {
                         if (!ticking) {
-                        requestAnimationFrame(function () {
-                        checkVisibility();
-                        ticking = false;
-                        });
-                        ticking = true;
+                            requestAnimationFrame(function () {
+                                checkVisibility();
+                                ticking = false;
+                            });
+                            ticking = true;
                         }
-                        });
+                    });
 
-                        window.addEventListener('resize', checkVisibility);
-                        })();
-                    </script>
+                    window.addEventListener('resize', checkVisibility);
+                })();
+        </script>
 
-                </body>
+    </body>
 
-            </html>
+</html>

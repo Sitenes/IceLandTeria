@@ -1,0 +1,132 @@
+@model IceLandTeria.ViewModels.EditProductViewModel
+
+@{
+    ViewData["Title"] = "ویرایش محصول";
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/admin-products.css" asp-append-version="true" />
+}
+
+<div class="admin-page">
+
+    <div class="admin-page-header">
+        <div>
+            <span class="admin-eyebrow">مدیریت محصولات</span>
+            <h1>ویرایش محصول</h1>
+            <p>اطلاعات محصول را ویرایش کنید.</p>
+        </div>
+
+        <a asp-controller="Products" asp-action="Index" class="admin-secondary-button">
+            بازگشت به محصولات
+        </a>
+    </div>
+
+    <form asp-controller="Products" asp-action="Edit" asp-route-id="@Model.Id" method="post" class="product-form">
+
+        @Html.AntiForgeryToken()
+
+        <input asp-for="Id" type="hidden" />
+
+        <div asp-validation-summary="ModelOnly" class="validation-summary" role="alert"></div>
+
+        <div class="form-grid">
+
+            <div class="form-field">
+                <label asp-for="CategoryId">
+                    دسته‌بندی
+                </label>
+
+                <select asp-for="CategoryId">
+
+                    <option value="0">
+                        انتخاب دسته‌بندی
+                    </option>
+
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value="@category.Id">
+                            @category.Title
+                        </option>
+                    }
+
+                </select>
+
+                <span asp-validation-for="CategoryId" class="field-validation"></span>
+            </div>
+
+            <div class="form-field">
+                <label asp-for="Title">
+                    عنوان محصول
+                </label>
+
+                <input asp-for="Title" type="text" maxlength="200" autocomplete="off" />
+
+                <span asp-validation-for="Title" class="field-validation"></span>
+            </div>
+
+            <div class="form-field">
+                <label asp-for="Price">
+                    قیمت
+                </label>
+
+                <div class="price-input-wrapper">
+                    <input asp-for="Price" type="text" inputmode="decimal" autocomplete="off" class="js-price-input" />
+
+                    <span>تومان</span>
+                </div>
+
+                <small class="field-hint">
+                    می‌توانید قیمت را با اعداد فارسی یا انگلیسی وارد کنید.
+                </small>
+
+                <span asp-validation-for="Price" class="field-validation"></span>
+            </div>
+
+            <div class="form-field">
+                <label asp-for="SortOrder">
+                    ترتیب نمایش
+                </label>
+
+                <input asp-for="SortOrder" type="number" min="0" inputmode="numeric" />
+
+                <small class="field-hint">
+                    عدد کوچک‌تر، اول نمایش داده می‌شود.
+                </small>
+
+                <span asp-validation-for="SortOrder" class="field-validation"></span>
+            </div>
+
+            <div class="form-field form-field-full">
+                <label asp-for="Description">
+                    توضیحات
+                </label>
+
+                <textarea asp-for="Description" rows="6" maxlength="2000"
+                          placeholder="توضیحات محصول را وارد کنید..."></textarea>
+
+                <span asp-validation-for="Description" class="field-validation"></span>
+            </div>
+
+        </div>
+
+        <div class="form-footer">
+
+            <a asp-controller="Products" asp-action="Index" class="admin-secondary-button">
+                انصراف
+            </a>
+
+            <button type="submit" class="admin-primary-button">
+                ذخیره تغییرات
+            </button>
+
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/admin-products.js" asp-append-version="true"></script>
+}

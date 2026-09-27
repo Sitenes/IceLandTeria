@@ -1,0 +1,100 @@
+@model IceLandTeria.ViewModels.CategoryFormViewModel
+
+@{
+    ViewData["Title"] = "افزودن دسته‌بندی";
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+}
+
+<div class="admin-page">
+
+    <div class="admin-page-header">
+
+        <div>
+            <span class="admin-eyebrow">
+                مدیریت دسته‌بندی‌ها
+            </span>
+
+            <h1 class="admin-page-title">
+                افزودن دسته‌بندی
+            </h1>
+
+            <p class="admin-page-description">
+                دسته‌بندی جدیدی برای سازمان‌دهی محصولات منو ایجاد کنید.
+            </p>
+        </div>
+
+        <a href="/Admin/Categories" class="admin-secondary-button">
+
+            بازگشت به دسته‌بندی‌ها
+
+        </a>
+
+    </div>
+
+
+    <section class="admin-form-card">
+
+        <form method="post" action="/Admin/Categories/Create" class="admin-form">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly" class="admin-validation-summary" role="alert">
+            </div>
+
+            <div class="admin-form-grid">
+
+                <div class="admin-form-group">
+
+                    <label asp-for="Title" class="admin-form-label">
+                    </label>
+
+                    <input asp-for="Title" class="admin-form-input" autocomplete="off" maxlength="100"
+                           placeholder="مثلاً قهوه" />
+
+                    <span asp-validation-for="Title" class="admin-field-validation">
+                    </span>
+
+                </div>
+
+                <div class="admin-form-group">
+
+                    <label asp-for="SortOrder" class="admin-form-label">
+                    </label>
+
+                    <input asp-for="SortOrder" class="admin-form-input" type="number" min="0" step="1"
+                           inputmode="numeric" placeholder="مثلاً ۱" />
+
+                    <span class="admin-form-hint">
+                        عدد کوچک‌تر باعث نمایش زودتر دسته‌بندی می‌شود.
+                    </span>
+
+                    <span asp-validation-for="SortOrder" class="admin-field-validation">
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="admin-form-actions">
+
+                <a href="/Admin/Categories" class="admin-secondary-button">
+                    انصراف
+                </a>
+
+                <button type="submit" class="admin-primary-button">
+
+                    ذخیره دسته‌بندی
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

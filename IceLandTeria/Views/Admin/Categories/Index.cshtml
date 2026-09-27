@@ -1,0 +1,270 @@
+@model IReadOnlyList<IceLandTeria.ViewModels.CategoryListViewModel>
+
+@{
+    ViewData["Title"] = "دسته‌بندی‌ها";
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+}
+
+<div class="admin-page">
+
+    <div class="admin-page-header">
+
+        <div>
+            <span class="admin-eyebrow">
+                مدیریت منو
+            </span>
+
+            <h1 class="admin-page-title">
+                دسته‌بندی‌ها
+            </h1>
+
+            <p class="admin-page-description">
+                دسته‌بندی‌های مورد استفاده برای سازمان‌دهی محصولات منو را مدیریت کنید.
+            </p>
+        </div>
+
+        <a href="/Admin/Categories/Create" class="admin-primary-button">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+
+            <span>
+                افزودن دسته‌بندی
+            </span>
+        </a>
+
+    </div>
+
+
+    @if (TempData["SuccessMessage"] is string successMessage)
+    {
+        <div class="admin-alert admin-alert--success" role="status">
+
+            <span class="admin-alert__icon" aria-hidden="true">
+                ✓
+            </span>
+
+            <span>
+                @successMessage
+            </span>
+
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] is string errorMessage)
+    {
+        <div class="admin-alert admin-alert--error" role="alert">
+
+            <span class="admin-alert__icon" aria-hidden="true">
+                !
+            </span>
+
+            <span>
+                @errorMessage
+            </span>
+
+        </div>
+    }
+
+
+    @if (Model.Count == 0)
+    {
+        <section class="admin-empty-state">
+
+            <div class="admin-empty-state__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                    <path
+                    d="M4 5.5A2.5 2.5 0 0 1 6.5 3h5A2.5 2.5 0 0 1 14 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-5A2.5 2.5 0 0 1 4 10.5v-5Zm1.5 0v5c0 .55.45 1 1 1h5c.55 0 1-.45 1-1v-5c0-.55-.45-1-1-1h-5c-.55 0-1 .45-1 1Zm7.5 8A2.5 2.5 0 0 1 15.5 11h2a2.5 2.5 0 0 1 2.5 2.5v5a2.5 2.5 0 0 1-2.5 2.5h-2a2.5 2.5 0 0 1-2.5-2.5v-5Zm1.5 0v5c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-5c0-.55-.45-1-1-1h-2c-.55 0-1 1-1 1Z" />
+                </svg>
+            </div>
+
+            <h2>
+                هنوز دسته‌بندی‌ای ایجاد نشده است
+            </h2>
+
+            <p>
+                برای شروع، اولین دسته‌بندی منو را ایجاد کنید.
+            </p>
+
+            <a href="/Admin/Categories/Create" class="admin-primary-button">
+
+                افزودن دسته‌بندی
+
+            </a>
+
+        </section>
+    }
+    else
+    {
+        <section class="admin-table-card">
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <caption class="visually-hidden">
+                        فهرست دسته‌بندی‌های منو
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                عنوان دسته‌بندی
+                            </th>
+
+                            <th scope="col">
+                                ترتیب نمایش
+                            </th>
+
+                            <th scope="col">
+                                تعداد محصولات
+                            </th>
+
+                            <th scope="col">
+                                عملیات
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+
+                                <td data-label="عنوان دسته‌بندی">
+                                    <div class="admin-category-title">
+                                        <span class="admin-category-title__mark" aria-hidden="true"></span>
+
+                                        <span>
+                                            @category.Title
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td data-label="ترتیب نمایش">
+                                    <span class="admin-order-badge">
+                                        @category.SortOrder
+                                    </span>
+                                </td>
+
+                                <td data-label="تعداد محصولات">
+                                    <span class="admin-product-count">
+                                        @category.ProductCount
+                                    </span>
+                                </td>
+
+                                <td data-label="عملیات">
+
+                                    <div class="admin-actions">
+
+                                        <a href="/Admin/Categories/Edit/@category.Id"
+                                           class="admin-action-button admin-action-button--edit"
+                                           aria-label="ویرایش دسته‌بندی @category.Title">
+
+                                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <path
+                                                d="m4 16.5-.7 3.7 3.7-.7L18.6 7.9a2.12 2.12 0 0 0-3-3L4 16.5Zm10.6-10.6 3.5 3.5" />
+                                            </svg>
+
+                                            <span>
+                                                ویرایش
+                                            </span>
+
+                                        </a>
+
+                                        @if (category.ProductCount == 0)
+                                        {
+                                            <button type="button" class="admin-action-button admin-action-button--delete"
+                                                    data-delete-category data-category-id="@category.Id"
+                                                    data-category-title="@category.Title" aria-label="حذف دسته‌بندی @category.Title">
+
+                                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path d="M5 7h14M10 11v6m4-6v6M9 7V4.5h6V7m-9 0 .8 13h10.4L18 7" />
+                                                </svg>
+
+                                                <span>
+                                                    حذف
+                                                </span>
+
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <span class="admin-delete-disabled" title="این دسته‌بندی دارای محصول است">
+
+                                                حذف
+
+                                            </span>
+                                        }
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+    }
+
+</div>
+
+
+<div class="admin-modal" id="deleteCategoryModal" aria-hidden="true">
+
+    <div class="admin-modal__backdrop" data-close-delete-modal></div>
+
+    <div class="admin-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="deleteCategoryTitle"
+         aria-describedby="deleteCategoryMessage">
+
+        <div class="admin-modal__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 3 2.8 19h18.4L12 3Zm0 5.5v5m0 3h.01" />
+            </svg>
+        </div>
+
+        <div class="admin-modal__content">
+
+            <h2 id="deleteCategoryTitle">
+                حذف دسته‌بندی
+            </h2>
+
+            <p id="deleteCategoryMessage">
+                آیا از حذف این دسته‌بندی مطمئن هستید؟
+            </p>
+
+        </div>
+
+        <div class="admin-modal__actions">
+
+            <button type="button" class="admin-secondary-button" data-close-delete-modal>
+
+                انصراف
+
+            </button>
+
+            <form id="deleteCategoryForm" method="post">
+
+                @Html.AntiForgeryToken()
+
+                <button type="submit" class="admin-danger-button">
+
+                    حذف دسته‌بندی
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

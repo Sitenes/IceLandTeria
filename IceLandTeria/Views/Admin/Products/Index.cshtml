@@ -1,0 +1,283 @@
+@model IceLandTeria.ViewModels.ProductListViewModel
+
+@{
+    ViewData["Title"] = "محصولات";
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/admin-products.css" asp-append-version="true" />
+}
+
+<div class="admin-page">
+
+    <div class="admin-page-header">
+        <div>
+            <span class="admin-eyebrow">مدیریت منو</span>
+            <h1>محصولات</h1>
+            <p>محصولات منوی IceLandTeria را مدیریت کنید.</p>
+        </div>
+
+        <a asp-controller="Products" asp-action="Create" class="admin-primary-button">
+            <span aria-hidden="true">+</span>
+            افزودن محصول
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] is string successMessage)
+    {
+        <div class="admin-alert admin-alert-success" role="alert">
+            <span class="admin-alert-icon" aria-hidden="true">✓</span>
+            <span>@successMessage</span>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] is string errorMessage)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">
+            <span class="admin-alert-icon" aria-hidden="true">!</span>
+            <span>@errorMessage</span>
+        </div>
+    }
+
+    <section class="admin-filter-panel" aria-label="فیلتر محصولات">
+
+        <form asp-controller="Products" asp-action="Index" method="get" class="product-filter-form">
+
+            <div class="filter-field filter-search">
+                <label for="search">جستجوی محصول</label>
+
+                <div class="input-with-icon">
+                    <span aria-hidden="true">⌕</span>
+
+                    <input id="search" name="search" type="search" value="@Model.Search"
+                           placeholder="عنوان محصول را جستجو کنید..." autocomplete="off" />
+                </div>
+            </div>
+
+            <div class="filter-field">
+                <label for="categoryId">دسته‌بندی</label>
+
+                <select id="categoryId" name="categoryId">
+
+                    <option value="">همه دسته‌بندی‌ها</option>
+
+                    @foreach (var category in Model.Categories)
+                    {
+                        if (Model.CategoryId == category.Id)
+                        {
+                            <option value="@category.Id" selected>
+                                @category.Title
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@category.Id">
+                                @category.Title
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="filter-actions">
+                <button type="submit" class="admin-secondary-button">
+                    اعمال فیلتر
+                </button>
+
+                @if (Model.HasFilters)
+                {
+                    <a asp-controller="Products" asp-action="Index" class="admin-clear-button">
+                        پاک کردن فیلترها
+                    </a>
+                }
+            </div>
+
+        </form>
+    </section>
+
+    <section class="product-list-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>فهرست محصولات</h2>
+            </div>
+
+            <span class="result-count">
+                @Model.Products.Count محصول
+            </span>
+        </div>
+
+        @if (Model.Products.Count == 0)
+        {
+            <div class="empty-state">
+                <div class="empty-state-icon" aria-hidden="true">
+                    +
+                </div>
+
+                <h3>محصولی پیدا نشد</h3>
+
+                @if (Model.HasFilters)
+                {
+                    <p>
+                        با فیلترهای فعلی محصولی برای نمایش وجود ندارد.
+                    </p>
+
+                    <a asp-controller="Products" asp-action="Index" class="admin-secondary-button">
+                        پاک کردن فیلترها
+                    </a>
+                }
+                else
+                {
+                    <p>
+                        هنوز محصولی در منوی شما ثبت نشده است.
+                    </p>
+
+                    <a asp-controller="Products" asp-action="Create" class="admin-primary-button">
+                        افزودن اولین محصول
+                    </a>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="product-table-wrapper">
+
+                <table class="product-table">
+
+                    <thead>
+                        <tr>
+                            <th>محصول</th>
+                            <th>دسته‌بندی</th>
+                            <th>قیمت</th>
+                            <th>ترتیب</th>
+                            <th>آخرین ویرایش</th>
+                            <th class="actions-column">عملیات</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var product in Model.Products)
+                        {
+                            <tr>
+                                <td data-label="محصول">
+                                    <div class="product-title-cell">
+                                        <strong>@product.Title</strong>
+
+                                        @if (!string.IsNullOrWhiteSpace(product.Description))
+                                        {
+                                            <span>
+                                                @(product.Description.Length > 90
+                                                    ? product.Description[..90] + "..."
+                                                    : product.Description)
+                                            </span>
+                                        }
+                                    </div>
+                                </td>
+
+                                <td data-label="دسته‌بندی">
+                                    <span class="category-badge">
+                                        @product.CategoryTitle
+                                    </span>
+                                </td>
+
+                                <td data-label="قیمت">
+                                    <strong class="price-value">
+                                        @product.Price.ToString(
+                                            "N0",
+                                            System.Globalization.CultureInfo.GetCultureInfo("fa-IR"))
+                                        <small>تومان</small>
+                                    </strong>
+                                </td>
+
+                                <td data-label="ترتیب">
+                                    @product.SortOrder
+                                </td>
+
+                                <td data-label="آخرین ویرایش">
+                                    <span class="date-value">
+                                        @{
+                                            product.UpdatedAt
+                                                .ToLocalTime()
+                                                .ToString("yyyy/MM/dd HH:mm");
+                                        }
+                                    </span>
+                                </td>
+
+                                <td data-label="عملیات" class="actions-column">
+
+                                    <div class="product-actions">
+
+                                        <a asp-controller="Products" asp-action="Edit" asp-route-id="@product.Id"
+                                           class="icon-action edit-action" aria-label="ویرایش @product.Title" title="ویرایش">
+                                            ویرایش
+                                        </a>
+
+                                        <form asp-controller="Products" asp-action="Delete" asp-route-id="@product.Id"
+                                              method="post" class="delete-product-form">
+
+                                            @Html.AntiForgeryToken()
+
+                                            <button type="button" class="icon-action delete-action js-delete-product"
+                                                    data-product-title="@product.Title" aria-label="حذف @product.Title" title="حذف">
+                                                حذف
+                                            </button>
+                                        </form>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        }
+    </section>
+</div>
+
+<div id="deleteModal" class="admin-modal" aria-hidden="true" role="dialog" aria-modal="true"
+     aria-labelledby="deleteModalTitle">
+
+    <div class="admin-modal-backdrop js-close-delete-modal"></div>
+
+    <div class="admin-modal-dialog" role="document">
+
+        <button type="button" class="modal-close-button js-close-delete-modal" aria-label="بستن">
+            ×
+        </button>
+
+        <div class="modal-warning-icon" aria-hidden="true">
+            !
+        </div>
+
+        <h2 id="deleteModalTitle">
+            حذف محصول
+        </h2>
+
+        <p>
+            آیا از حذف محصول
+            <strong id="deleteProductTitle"></strong>
+            مطمئن هستید؟
+        </p>
+
+        <div class="modal-warning-text">
+            این عملیات اطلاعات محصول را به‌صورت دائمی حذف می‌کند.
+        </div>
+
+        <div class="modal-actions">
+            <button type="button" class="admin-secondary-button js-close-delete-modal">
+                انصراف
+            </button>
+
+            <button type="button" class="admin-danger-button" id="confirmDeleteButton">
+                حذف دائمی
+            </button>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin-products.js" asp-append-version="true"></script>
+}
